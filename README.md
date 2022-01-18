@@ -14,7 +14,7 @@ The Neural Style Transfer model actually only needs 2 pictures – a content pic
 The algorithm used for this problem was the Neural Style Transfer model. While there are many hyperparameters to investigate and tune, the primary ones to focus on were the optimizer's alpha (learning rate) and the model’s content and style weights (how transformations are applied). Other hyperparameters considered were the optimizers Beta_1 and Beta 2, its epsilon, and whether to utilize AMSgrad convergence. Future work could include investigating the type of optimizer selected for this model (using L-BFGS instead of Adam) and the architecture of the model (types of layers, amount of layers, etc…). In terms of the Starry Night style, given the fact that the model was designed for that specific task, the baseline hyperparameters worked well. In terms of the Crypto Punk style, I found the most success tuning down the content weight from 100 to 10 and the style weight from .01 to .001. However, I believe that more tuning of these weights in combination with the learning rates and model iterations could have continued to improve results.
 
 ## Tools
-**Numpy** - Data Preparation Tool  
+**NumPy** - Data Preparation Tool  
 **TensorFlow** - Deep Neural Network software library   
 **Keras** - Python library utilize as an interface for TensorFlow  
 **Matplotlib** - Data visualization tools  
