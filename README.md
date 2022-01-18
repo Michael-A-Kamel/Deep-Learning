@@ -20,4 +20,4 @@ The algorithm used for this problem was the Neural Style Transfer model. While t
 **Matplotlib** - Data visualization tools  
 
 ## Communication
-After building and testing my model, I shared my findings with my cohort via this [presentation](https://github.com/mkamel96/Deep-Learning/blob/main/Final-Project/Deep%20Learning%20Presentation.pdf).
+After building and testing my model, I shared my findings with my cohort via this [presentation](https://github.com/Michael-A-Kamel/Deep-Learning/blob/main/Deep%20Learning%20Presentation.pdf).
