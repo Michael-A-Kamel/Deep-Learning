@@ -53,14 +53,14 @@ if __name__ == "__main__":
 	st.subheader('Style Image')
 	style_image_file = st.file_uploader('Upload Style Image (An Art Style of your Choosing, Traditional or NFT)', type=['png','jpg','jpeg'])
 
-# 	if content_image_file is not None and style_image_file is not None:
-# 		# To Prepare Images for Modeling
-# 		content = load_img(content_image_file).astype('uint8')
-# 		style = load_img(style_image_file).astype('uint8') 
+	if content_image_file is not None and style_image_file is not None:
+		# To Prepare Images for Modeling
+		content = load_img(content_image_file).astype('uint8')
+		style = load_img(style_image_file).astype('uint8') 
 
-# 		# To View Uploaded Image
-# 		st.image(imshow(content, 'Content Image')),width=250)
-# 		st.image(imshow(style, 'Style Image')),width=250)
+		# To View Uploaded Image
+		st.image(imshow(content, 'Content Image')),width=250)
+		st.image(imshow(style, 'Style Image')),width=250)
 
   
   
