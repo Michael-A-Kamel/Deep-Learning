@@ -272,7 +272,7 @@ if __name__ == "__main__":
 		# Run Fusion
 		best_image, best_loss = run_style_transfer(content_image_file, style_image_file, num_iterations = 100)
 		
-		Image.fromarray(best_image)
+		st.image((Image.fromarray(best_image)),width=250)
 
   
   
