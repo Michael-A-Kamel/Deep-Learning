@@ -66,6 +66,20 @@ def deprocess_img(processed_img):
 	x = np.clip(x, 0, 255).astype('uint8')
 	return x
 
+# Content layer where will pull our feature maps
+content_layers = ['block5_conv2'] 
+
+# Style layer we are interested in
+style_layers = ['block1_conv1',
+                'block2_conv1',
+                'block3_conv1', 
+                'block4_conv1', 
+                'block5_conv1'
+               ]
+
+num_content_layers = len(content_layers)
+num_style_layers = len(style_layers)
+
 def get_model():
 	""" Creates our model with access to intermediate layers. 
 	
@@ -175,8 +189,7 @@ def run_style_transfer(content_path,
                        num_iterations=1000,
                        content_weight=1e3, 
                        style_weight=1e-2): 
-	# We don't need to (or want to) train any layers of our model, so we set their
-	# trainable to false. 
+	# We don't need to (or want to) train any layers of our model, so we set their trainable to false. 
 	model = get_model() 
 	for layer in model.layers:
 		layer.trainable = False
