@@ -26,9 +26,9 @@ def load_img(path_to_img):
 	img = img.resize((round(img.size[0]*scale), round(img.size[1]*scale)), Image.ANTIALIAS)
 	img = kp_image.img_to_array(img)
 
-  # We need to broadcast the image array such that it has a batch dimension 
+	# We need to broadcast the image array such that it has a batch dimension 
 	img = np.expand_dims(img, axis=0)
-  	return img
+	return img
 
 # Showing the image
 def imshow(img, title=None):
@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
 		# To View Uploaded Image
 		st.image(imshow(content, 'Content Image')),width=250)
-	 	st.image(imshow(style, 'Style Image')),width=250)
+		st.image(imshow(style, 'Style Image')),width=250)
 
   
   
