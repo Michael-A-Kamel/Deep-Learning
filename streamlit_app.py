@@ -10,9 +10,7 @@ import streamlit as st
 
 import tensorflow as tf
 from tensorflow.python.keras.preprocessing import image as kp_image
-from tensorflow.python.keras import models 
-from tensorflow.python.keras import losses
-from tensorflow.python.keras import layers
+from tensorflow.python.keras import models, losses, layers
 from tensorflow.python.keras import backend as K
 
 
@@ -220,8 +218,6 @@ def run_style_transfer(content_path,
 	num_rows = 2
 	num_cols = 5
 	display_interval = num_iterations/(num_rows*num_cols)
-	start_time = time.time()
-	global_start = time.time()
 	
 	norm_means = np.array([103.939, 116.779, 123.68])
 	min_vals = -norm_means
@@ -234,25 +230,20 @@ def run_style_transfer(content_path,
 		opt.apply_gradients([(grads, init_image)])
 		clipped = tf.clip_by_value(init_image, min_vals, max_vals)
 		init_image.assign(clipped)
-		end_time = time.time() 
 		
 		if loss < best_loss:
 			# Update best loss and best image from total loss. 
 			best_loss = loss
 			best_img = deprocess_img(init_image.numpy())
 		
-		if i % display_interval== 0:
-			start_time = time.time()
-			
+		if i % display_interval== 0:			
 			# Use the .numpy() method to get the concrete numpy array
 			plot_img = init_image.numpy()
 			plot_img = deprocess_img(plot_img)
 			imgs.append(plot_img)
 			IPython.display.clear_output(wait=True)
 			IPython.display.display_png(Image.fromarray(plot_img))
-			print('Iteration: {}'.format(i))        
 			
-	print('Total time: {:.4f}s'.format(time.time() - global_start))
 	IPython.display.clear_output(wait=True)
 	plt.figure(figsize=(14,4))
 	for i,img in enumerate(imgs):
