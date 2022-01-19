@@ -59,8 +59,11 @@ if __name__ == "__main__":
 		style = load_img(style_image_file).astype('uint8') 
 
 		# To View Uploaded Image
-		st.image(imshow(content, 'Content Image')),width=250)
-		st.image(imshow(style, 'Style Image')),width=250)
+		st.image(content_image_file ,width=250)
+		st.image(style_image_file ,width=250)
+		
+		#st.image(imshow(content, 'Content Image')),width=250)
+		#st.image(imshow(style, 'Style Image')),width=250)
 
   
   
