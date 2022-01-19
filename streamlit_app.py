@@ -46,10 +46,10 @@ if __name__ == "__main__":
 	st.title('Neural Algorithm of Artistic Style: Fuse A Picture of Yourself with Any Style You Like')
 
 	st.subheader("Content Image")
-		content_image_file = st.file_uploader("Upload Content Image (A Picture of You)", type=["png","jpg","jpeg"])
+	content_image_file = st.file_uploader("Upload Content Image (A Picture of You)", type=["png","jpg","jpeg"])
 
 	st.subheader("Style Image")
-		style_image_file = st.file_uploader("Upload Style Image (Art of your Choosing, Traditional or NFT)", type=["png","jpg","jpeg"])
+	style_image_file = st.file_uploader("Upload Style Image (Art of your Choosing, Traditional or NFT)", type=["png","jpg","jpeg"])
 
 	if content_image_file is not None and style_image_file is not None:
 		# To Prepare Images for Modeling
