@@ -45,7 +45,7 @@ def imshow(img, title=None):
 
 if __name__ == "__main__":
 	st.title('Neural Algorithm of Artistic Style')
-	st.subheader('Fuse A Picture of Yourself with Any Style You Like')
+	st.subheader('Fuse A Picture of Yourself with Any Style You Like!')
 
 	st.subheader('Content Image')
 	content_image_file = st.file_uploader("Upload Content Image (A Picture of You)", type=["png","jpg","jpeg"])
