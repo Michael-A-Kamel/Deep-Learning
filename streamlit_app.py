@@ -12,6 +12,8 @@ import tensorflow as tf
 from tensorflow.python.keras.preprocessing import image as kp_image
 from tensorflow.python.keras import models, losses, layers
 from tensorflow.python.keras import backend as K
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 
 # Setup Prior to Streamlit Code
