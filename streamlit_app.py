@@ -186,7 +186,7 @@ def compute_grads(cfg):
 # Final Step: Run the Styler Transfer
 def run_style_transfer(content_path, 
                        style_path,
-                       num_iterations=25,
+                       num_iterations=100,
                        content_weight=1e3, 
                        style_weight=1e-2): 
 	# We don't need to (or want to) train any layers of our model, so we set their trainable to false. 
