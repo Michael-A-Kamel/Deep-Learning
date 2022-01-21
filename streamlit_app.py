@@ -186,7 +186,7 @@ def compute_grads(cfg):
 # Final Step: Run the Styler Transfer
 def run_style_transfer(content_path, 
                        style_path,
-                       num_iterations=100,
+                       num_iterations=25,
                        content_weight=1e3, 
                        style_weight=1e-2): 
 	# We don't need to (or want to) train any layers of our model, so we set their trainable to false. 
@@ -268,8 +268,8 @@ if __name__ == "__main__":
 
 	if content_image_file is not None and style_image_file is not None: 
 		# To View Uploaded Image
-		st.image(content_image_file ,width=250)
-		st.image(style_image_file ,width=250)
+		st.image(content_image_file, width=250)
+		st.image(style_image_file, width=250)
 	
 		# Run Fusion
 		best_image, best_loss = run_style_transfer(content_image_file, style_image_file)
